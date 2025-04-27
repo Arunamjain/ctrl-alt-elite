@@ -1,6 +1,8 @@
 LifeFlow - Blood Donation Network
 Overview
-LifeFlow is a web application designed to connect blood donors with recipients and blood banks. The platform facilitates blood donation scheduling, blood bank searches, and donor profile management. This repository contains the frontend implementation of the LifeFlow application.
+LifeFlow is a web application designed to connect blood donors with recipients and blood banks.
+The platform facilitates blood donation scheduling, blood bank searches, and donor profile management.
+This repository contains the frontend implementation of the LifeFlow application.
 
 Features
 User Authentication
@@ -12,7 +14,6 @@ Session management using localStorage
 
 Donor Dashboard
 Home Screen:
-
 Quick actions for donation and blood search
 
 Donation process steps
@@ -20,7 +21,6 @@ Donation process steps
 Nearby blood banks with ratings
 
 Search Screen:
-
 Blood type filtering
 
 Blood bank search functionality
@@ -28,7 +28,6 @@ Blood bank search functionality
 Contact options for available blood
 
 Profile Screen:
-
 Donation statistics (count, liters, lives saved)
 
 Blood type information
@@ -55,10 +54,12 @@ Installation
 Clone the repository:
 
 bash
+Copy code
 git clone https://github.com/your-username/LifeFlow-Blood-Donation.git
 Open the project directory:
 
 bash
+Copy code
 cd LifeFlow-Blood-Donation
 Launch the application by opening finallogin.html in a web browser.
 
@@ -80,6 +81,8 @@ Search for blood banks and available blood types
 Track your donation history and impact
 
 File Structure
+bash
+Copy code
 LifeFlow-Blood-Donation/
 ├── finaldashboard.html       # Main donor dashboard
 ├── finaldashboard.css        # Dashboard styles
@@ -100,7 +103,8 @@ Push notifications for donation reminders
 Blood donation appointment scheduling system
 
 Contributing
-Contributions are welcome! Please fork the repository and submit pull requests for any improvements or bug fixes.
+Contributions are welcome!
+Please fork the repository and submit pull requests for any improvements or bug fixes.
 
 License
 This project is open-source and available under the MIT License.
