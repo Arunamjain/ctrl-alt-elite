@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeFlow - Blood Donation Network</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>LifeFlow</h1>
+            <p>Connecting blood donors with those in need</p>
+        </div>
+
+        <div class="auth-container">
+            <div class="tabs">
+                <div class="tab active" onclick="switchTab('login')">Login</div>
+                <div class="tab" onclick="switchTab('signup')">Sign Up</div>
+            </div>
+
+            <!-- Login Form -->
+            <div id="login-form">
+                <div class="form-group">
+                    <label for="aadhaar-id">Enter your Aadhaar ID</label>
+                    <input type="text" id="aadhaar-id" placeholder="Aadhaar ID" class="input">
+                </div>
+
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" placeholder="Enter your email">
+                </div>
+
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" placeholder="Enter your password">
+                </div>
+
+                <div class="role-selection">
+                    <label>Login as:</label>
+                    <div class="role-options">
+                        <div class="role-option selected" onclick="selectRole(this, 'donor')">
+                            <i class="fas fa-user"></i>
+                            Donor
+                        </div>
+                        <div class="role-option" onclick="selectRole(this, 'hospital')">
+                            <i class="fas fa-hospital"></i>
+                            Hospital
+                        </div>
+                        <div class="role-option" onclick="selectRole(this, 'admin')">
+                            <i class="fas fa-shield-alt"></i>
+                            Admin
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn" onclick="login()">Login</button>
+
+                <div class="forgot-password">
+                    <a href="#">Forgot password?</a>
+                </div>
+            </div>
+
+            <!-- Sign Up Form -->
+            <div id="signup-form" style="display: none;">
+                <div class="form-group">
+                    <label for="signup-name">Name</label>
+                    <input type="text" id="signup-name" placeholder="Enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="aadhaar-id">Enter your Aadhaar ID</label>
+                    <input type="text" id="aadhaar-id" placeholder="Aadhaar ID" class="input">
+                </div>
+
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" placeholder="Enter your email">
+                </div>
+
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" placeholder="Enter your password">
+                </div>
+
+                <div class="form-group">
+                    <label for="signup-confirm-password">Confirm Password</label>
+                    <input type="password" id="signup-confirm-password" placeholder="Confirm your password">
+                </div>
+
+                <div class="role-selection">
+                    <label>Sign Up as:</label>
+                    <div class="role-options">
+                        <div class="role-option selected" onclick="selectRole(this, 'donor', true)">
+                            <i class="fas fa-user"></i>
+                            Donor
+                        </div>
+                        <div class="role-option" onclick="selectRole(this, 'hospital', true)">
+                            <i class="fas fa-hospital"></i>
+                            Hospital
+                        </div>
+                        <div class="role-option" onclick="selectRole(this, 'admin', true)">
+                            <i class="fas fa-shield-alt"></i>
+                            Admin
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn" onclick="signup()">Sign Up</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script3.1.js"></script>
+</body>
+</html>
