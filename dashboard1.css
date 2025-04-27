@@ -1,0 +1,725 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f0f0;
+    color: #333;
+}
+
+.app-container {
+    max-width: 420px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.screen {
+    background-color: white;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 60px;
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+#home-screen {
+    display: block;
+}
+
+.header {
+    background-color: #e51e25;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h2 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.header-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.header-icons i {
+    font-size: 20px;
+}
+
+.content {
+    padding: 15px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    padding: 5px 10px;
+    outline: none;
+    font-size: 14px;
+}
+
+.category-section {
+    margin-bottom: 25px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-title .see-all {
+    color: #e51e25;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.category-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: #fce8e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e51e25;
+    font-size: 24px;
+}
+
+.category-name {
+    font-size: 12px;
+    text-align: center;
+}
+
+.donation-card {
+    background: linear-gradient(135deg, #e51e25, #b31217);
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.donation-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.donation-card p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.btn {
+    background-color: white;
+    color: #e51e25;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 15px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.blood-banks {
+    margin-bottom: 25px;
+}
+
+.blood-bank-card {
+    display: flex;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
+    align-items: center;
+    gap: 15px;
+}
+
+.blood-bank-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #fce8e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e51e25;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.blood-bank-info {
+    flex: 1;
+}
+
+.blood-bank-name {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.blood-bank-distance {
+    font-size: 12px;
+    color: #666;
+}
+
+.blood-bank-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.rating-stars {
+    color: #fdb441;
+}
+
+.donate-btn {
+    background-color: #e51e25;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 15px;
+    font-weight: 500;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.appointments {
+    margin-bottom: 25px;
+}
+
+.appointment-card {
+    display: flex;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
+    align-items: center;
+    gap: 15px;
+}
+
+.appointment-date {
+    min-width: 55px;
+    text-align: center;
+}
+
+.appointment-day {
+    font-weight: 600;
+    color: #e51e25;
+    font-size: 15px;
+}
+
+.appointment-month {
+    font-size: 12px;
+    color: #666;
+}
+
+.appointment-info {
+    flex: 1;
+}
+
+.appointment-title {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.appointment-time {
+    font-size: 12px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #fce8e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e51e25;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.profile-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.profile-blood {* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f0f0;
+    color: #333;
+}
+
+.app-container {
+    max-width: 420px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.screen {
+    background-color: white;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 60px;
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+#home-screen {
+    display: block;
+}
+
+.header {
+    background-color: #e51e25;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h2 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.header-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.header-icons i {
+    font-size: 20px;
+}
+
+.content {
+    padding: 15px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    padding: 5px 10px;
+    outline: none;
+    font-size: 14px;
+}
+
+.category-section {
+    margin-bottom: 25px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-title .see-all {
+    color: #e51e25;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.category-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: #fce8e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e51e25;
+    font-size: 24px;
+}
+
+.category-name {
+    font-size: 12px;
+    text-align: center;
+}
+
+.donation-card {
+    background: linear-gradient(135deg, #e51e25, #b31217);
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.donation-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.donation-card p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.btn {
+    background-color: white;
+    color: #e51e25;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 15px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.blood-banks {
+    margin-bottom: 25px;
+}
+
+.blood-bank-card {
+    display: flex;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
+    align-items: center;
+    gap: 15px;
+}
+
+.blood-bank-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #fce8e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e51e25;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.blood-bank-info {
+    flex: 1;
+}
+
+.blood-bank-name {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.blood-bank-distance {
+    font-size: 12px;
+    color: #666;
+}
+
+.blood-bank-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.rating-stars {
+    color: #fdb441;
+}
+
+.donate-btn {
+    background-color: #e51e25;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 15px;
+    font-weight: 500;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.appointments {
+    margin-bottom: 25px;
+}
+
+.appointment-card {
+    display: flex;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
+    align-items: center;
+    gap: 15px;
+}
+
+.appointment-date {
+    min-width: 55px;
+    text-align: center;
+}
+
+.appointment-day {
+    font-weight: 600;
+    color: #e51e25;
+    font-size: 15px;
+}
+
+.appointment-month {
+    font-size: 12px;
+    color: #666;
+}
+
+.appointment-info {
+    flex: 1;
+}
+
+.appointment-title {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.appointment-time {
+    font-size: 12px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #fce8e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e51e25;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.profile-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.profile-blood {
+    background-color: #fce8e8;
+    color: #e51e25;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.profile-stats {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.stat {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.stat-value {
+    font-weight: 600;
+    font-size: 18px;
+    color: #e51e25;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #666;
+}
+
+.blood-info {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.blood-type-card {
+    text-align: center;
+    background-color: #fce8e8;
+    padding: 15px 20px;
+    border-radius: 15px;
+    min-width: 100px;
+}
+
+.blood-type {
+    font-size: 24px;
+    font-weight: 700;
+    color: #e51e25;
+    margin-bottom: 5px;
+}
+
+.blood-label {
+    font-size: 12px;
+    color: #666;
+}
+
+.tab-bar {
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    padding: 15px 0 5px;
+}    
+    background-color: #fce8e8;
+    color: #e51e25;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.profile-stats {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.stat {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.stat-value {
+    font-weight: 600;
+    font-size: 18px;
+    color: #e51e25;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #666;
+}
+
+.blood-info {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.blood-type-card {
+    text-align: center;
+    background-color: #fce8e8;
+    padding: 15px 20px;
+    border-radius: 15px;
+    min-width: 100px;
+}
+
+.blood-type {
+    font-size: 24px;
+    font-weight: 700;
+    color: #e51e25;
+    margin-bottom: 5px;
+}
+
+.blood-label {
+    font-size: 12px;
+    color: #666;
+}
+
+.tab-bar {
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    padding: 15px 0 5px;
+}

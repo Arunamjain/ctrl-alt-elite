@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation App</title>
+    <link rel="stylesheet" href="dashboard1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Home Screen -->
+        <div class="screen" id="home-screen">
+            <div class="header">
+                <h2>Blood Donation</h2>
+                <div class="header-icons">
+                    <i class="fas fa-bell"></i>
+                    <i class="fas fa-cog"></i>
+                </div>
+            </div>
+            <div class="content">
+                <div class="donation-card">
+                    <h3>Save Lives Today</h3>
+                    <p>Your blood donation can help save up to 3 lives. Schedule your donation now!</p>
+                    <button class="btn">Donate Now</button>
+                </div>
+                
+                <div class="category-section">
+                    <div class="section-title">
+                        <span>Blood Services</span>
+                    </div>
+                    <div class="categories">
+                        <div class="category">
+                            <div class="category-icon">
+                                <i class="fas fa-tint"></i>
+                            </div>
+                            <div class="category-name">Donate</div>
+                        </div>
+                        <div class="category">
+                            <div class="category-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="category-name">Find Blood</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="blood-banks">
+                    <div class="section-title">
+                        <span>Nearby Blood Banks</span>
+                        <span class="see-all">See All</span>
+                    </div>
+                    
+                    <div class="blood-bank-card">
+                        <div class="blood-bank-logo">RBC</div>
+                        <div class="blood-bank-info">
+                            <div class="blood-bank-name">Red Cross Blood Center</div>
+                            <div class="blood-bank-distance">2.5 km away</div>
+                            <div class="blood-bank-rating">
+                                <span class="rating-stars">★★★★★</span>
+                                <span>5.0 (120)</span>
+                            </div>
+                        </div>
+                        <button class="donate-btn">Donate</button>
+                    </div>
+                    
+                    <div class="blood-bank-card">
+                        <div class="blood-bank-logo">CL</div>
+                        <div class="blood-bank-info">
+                            <div class="blood-bank-name">City Life Hospital</div>
+                            <div class="blood-bank-distance">3.7 km away</div>
+                            <div class="blood-bank-rating">
+                                <span class="rating-stars">★★★★☆</span>
+                                <span>4.8 (86)</span>
+                            </div>
+                        </div>
+                        <button class="donate-btn">Donate</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Search Screen -->
+        <div class="screen" id="search-screen">
+            <div class="header">
+                <h2>Find Blood</h2>
+                <div class="header-icons">
+                    <i class="fas fa-filter"></i>
+                </div>
+            </div>
+            <div class="content">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search blood banks, hospitals...">
+                </div>
+                
+                <div class="category-section">
+                    <div class="section-title">
+                        <span>Blood Types</span>
+                    </div>
+                    <div class="categories">
+                        <div class="category">
+                            <div class="category-icon">A+</div>
+                            <div class="category-name">A+</div>
+                        </div>
+                        <div class="category">
+                            <div class="category-icon">B+</div>
+                            <div class="category-name">B+</div>
+                        </div>
+                        <div class="category">
+                            <div class="category-icon">AB+</div>
+                            <div class="category-name">AB+</div>
+                        </div>
+                        <div class="category">
+                            <div class="category-icon">O+</div>
+                            <div class="category-name">O+</div>
+                        </div>
+                        <div class="category">
+                            <div class="category-icon">A-</div>
+                            <div class="category-name">A-</div>
+                        </div>
+                        <div class="category">
+                            <div class="category-icon">B-</div>
+                            <div class="category-name">B-</div>
+                        </div>
+                        <div class="category">
+                            <div class="category-icon">AB-</div>
+                            <div class="category-name">AB-</div>
+                        </div>
+                        <div class="category">
+                            <div class="category-icon">O-</div>
+                            <div class="category-name">O-</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="blood-banks">
+                    <div class="section-title">
+                        <span>Available Blood Banks</span>
+                    </div>
+                    
+                    <div class="blood-bank-card">
+                        <div class="blood-bank-logo">RBC</div>
+                        <div class="blood-bank-info">
+                            <div class="blood-bank-name">Red Cross Blood Center</div>
+                            <div class="blood-bank-distance">Available: A+, B+, O-</div>
+                            <div class="blood-bank-rating">
+                                <span class="rating-stars">★★★★★</span>
+                                <span>5.0 (120)</span>
+                            </div>
+                        </div>
+                        <button class="donate-btn">Contact</button>
+                    </div>
+                    
+                    <div class="blood-bank-card">
+                        <div class="blood-bank-logo">CL</div>
+                        <div class="blood-bank-info">
+                            <div class="blood-bank-name">City Life Hospital</div>
+                            <div class="blood-bank-distance">Available: AB+, O+, O-</div>
+                            <div class="blood-bank-rating">
+                                <span class="rating-stars">★★★★☆</span>
+                                <span>4.8 (86)</span>
+                            </div>
+                        </div>
+                        <button class="donate-btn">Contact</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Profile Screen -->
+        <div class="screen" id="profile-screen">
+            <div class="header">
+                <h2>My Profile</h2>
+                <div class="header-icons">
+                    <i class="fas fa-edit"></i>
+                </div>
+            </div>
+            <div class="content">
+                <div class="profile-header">
+                    <div class="profile-pic">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="profile-name">John Donor</div>
+                    <div class="profile-blood">A+</div>
+                </div>
+                
+                <div class="profile-stats">
+                    <div class="stat">
+                        <div class="stat-value">12</div>
+                        <div class="stat-label">Donations</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">3.6</div>
+                        <div class="stat-label">Liters</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">36</div>
+                        <div class="stat-label">Lives Saved</div>
+                    </div>
+                </div>
+                
+                <div class="blood-info">
+                    <div class="blood-type-card">
+                        <div class="blood-type">A+</div>
+                        <div class="blood-label">Blood Type</div>
+                    </div>
+                    <div class="blood-type-card">
+                        <div class="blood-type">102</div>
+                        <div class="blood-label">Days Since Last</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Tab Bar (Fixed at bottom of all screens) -->
+        <div class="tab-bar">
+            <div class="tab active" data-screen="home-screen">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </div>
+            <div class="tab" data-screen="search-screen">
+                <i class="fas fa-search"></i>
+                <span>Search</span>
+            </div>
+            <div class="tab" data-screen="profile-screen">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard1.js"></script>
+</body>
+</html>
