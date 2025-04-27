@@ -35,36 +35,22 @@ async function login() {
         return;
     }
 
-    try {
-        // For demo purposes, we'll simulate a successful login
-        // In a real app, you would make an API call here
-        const user = {
-            role: currentRole,
-            name: "John Donor", // Example name
-            email: email
-        };
+    // Demo user data with initialized values
+    const user = {
+        role: currentRole,
+        name: email.split('@')[0] || 'Donor',
+        email: email,
+        bloodType: 'A+',
+        donations: 0,
+        liters: 0,
+        livesSaved: 0,
+        daysSinceLast: 0
+    };
 
-        // Store user data in localStorage
-        localStorage.setItem('user', JSON.stringify(user));
-
-        // Redirect based on role
-        switch (currentRole) {
-            case 'donor':
-                window.location.href = 'dashboard3.html';
-                break;
-            case 'hospital':
-                // In a real app, you would redirect to hospital dashboard
-                alert('Hospital dashboard would load here');
-                break;
-            case 'admin':
-                // In a real app, you would redirect to admin dashboard
-                alert('Admin dashboard would load here');
-                break;
-        }
-    } catch (error) {
-        alert(error.message);
-    }
+    localStorage.setItem('user', JSON.stringify(user));
+    window.location.href = 'dashboard3.html';
 }
+
 
 async function signup() {
     const name = document.getElementById('signup-name').value;
@@ -83,30 +69,19 @@ async function signup() {
         return;
     }
 
-    try {
-        const response = await fetch('http://localhost:5000/api/signup', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                name,
-                email,
-                password,
-                role: currentRole,
-                aadhaarId
-            })
-        });
+    // Create new user with initial values
+    const user = {
+        role: currentRole,
+        name: name,
+        email: email,
+        bloodType: 'A+',
+        donations: 0,
+        liters: 0,
+        livesSaved: 0,
+        daysSinceLast: 0
+    };
 
-        const data = await response.json();
-
-        if (!response.ok) {
-            throw new Error(data.message || 'Signup failed');
-        }
-
-        alert('Signup successful! Please log in.');
-        switchTab('login');
-    } catch (error) {
-        alert(error.message);
-    }
+    localStorage.setItem('user', JSON.stringify(user));
+    alert('Signup successful!');
+    window.location.href = 'dashboard3.html';
 }

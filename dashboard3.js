@@ -142,4 +142,5 @@ document.addEventListener('DOMContentLoaded', function() {
         // This is a placeholder for demonstration purposes
         // In a real app, you would load JSON language files or use a translation library
     }
+
 });

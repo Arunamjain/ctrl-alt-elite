@@ -111,7 +111,26 @@
             </div>
         </div>
     </div>
-
+<script>
+    // Check if user is already logged in
+    document.addEventListener('DOMContentLoaded', function() {
+        const user = localStorage.getItem('user');
+        if (user) {
+            const userData = JSON.parse(user);
+            switch (userData.role) {
+                case 'donor':
+                    window.location.href = 'dashboard3.html';
+                    break;
+                case 'hospital':
+                    // Redirect to hospital dashboard
+                    break;
+                case 'admin':
+                    // Redirect to admin dashboard
+                    break;
+            }
+        }
+    });
+</script>
     <script src="script3.1.js"></script>
 </body>
 </html>
