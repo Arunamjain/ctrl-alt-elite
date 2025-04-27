@@ -106,15 +106,3 @@ This project is open-source and available under the MIT License.
 
 yaml
 Copy code
-
----
-
-✅ This will automatically render everything bold wherever needed when you upload to GitHub.
-
-Would you also like me to help you create a **badge section** at the top like this? 👇
-
-
-vbnet
-Copy code
-
-It will look **even more professional**! Want me to add that? 🚀
