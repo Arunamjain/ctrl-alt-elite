@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeFlow - Blood Donation App</title>
+    <link rel="stylesheet" href="dashboard3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+
+    <div class="app-container">
+        <!-- Home Screen -->
+        <div class="screen active" id="home-screen">
+            <div class="header">
+                <h2>LifeFlow</h2>
+                <div class="header-icons">
+                    <i class="fas fa-bell"></i>
+                    <i class="fas fa-cog"></i>
+                </div>
+            </div>
+            <div class="content">
+                <div class="donation-card">
+                    <h3 data-i18n="saveToday">Save Lives Today</h3>
+                    <p data-i18n="saveDescription">Your blood donation can help save up to 3 lives. Every drop counts in making a difference!</p>
+                    <button class="btn" data-i18n="scheduleDonation">Schedule Donation</button>
+                </div>
+                
+                <div class="category-section">
+                    <div class="section-title">
+                        <span data-i18n="quickActions">Quick Actions</span>
+                    </div>
+                    <div class="categories">
+                        <div class="category" onclick="switchScreen('donate-screen')">
+                            <div class="category-icon">
+                                <i class="fas fa-tint"></i>
+                            </div>
+                            <div class="category-name" data-i18n="donate">Donate</div>
+                        </div>
+                        <div class="category" onclick="switchScreen('search-screen')">
+                            <div class="category-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="category-name" data-i18n="findBlood">Find Blood</div>
+                        </div>
+                        <div class="category">
+                            <div class="category-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="category-name" data-i18n="myImpact">My Impact</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="donation-steps">
+                    <div class="section-title">
+                        <span data-i18n="howItWorks">How It Works</span>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4 data-i18n="schedule">Schedule</h4>
+                            <p data-i18n="scheduleDescription">Book an appointment at your nearest blood donation center</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4 data-i18n="donateStep">Donate</h4>
+                            <p data-i18n="donateDescription">The donation process takes only about 10-15 minutes</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4 data-i18n="saveLives">Save Lives</h4>
+                            <p data-i18n="saveLivesDescription">Your donation helps patients in need of blood transfusions</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="blood-banks">
+                    <div class="section-title">
+                        <span data-i18n="nearbyBloodBanks">Nearby Blood Banks</span>
+                        <span class="see-all" data-i18n="seeAll">See All</span>
+                    </div>
+                    
+                    <div class="blood-bank-card">
+                        <div class="blood-bank-logo">RBC</div>
+                        <div class="blood-bank-info">
+                            <div class="blood-bank-name">Red Cross Blood Center</div>
+                            <div class="blood-bank-distance">2.5 km away • Open until 6 PM</div>
+                            <div class="blood-bank-rating">
+                                <span class="rating-stars">★★★★★</span>
+                                <span>5.0 (120 reviews)</span>
+                            </div>
+                        </div>
+                        <button class="donate-btn" data-i18n="book">Book</button>
+                    </div>
+                    
+                    <div class="blood-bank-card">
+                        <div class="blood-bank-logo">CL</div>
+                        <div class="blood-bank-info">
+                            <div class="blood-bank-name">City Life Hospital</div>
+                            <div class="blood-bank-distance">3.7 km away • Open until 5 PM</div>
+                            <div class="blood-bank-rating">
+                                <span class="rating-stars">★★★★☆</span>
+                                <span>4.8 (86 reviews)</span>
+                            </div>
+                        </div>
+                        <button class="donate-btn" data-i18n="book">Book</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Search Screen -->
+        <div class="screen" id="search-screen">
+            <div class="header">
+                <h2 data-i18n="findBlood">Find Blood</h2>
+                <div class="header-icons">
+                    <i class="fas fa-filter"></i>
+                </div>
+            </div>
+            <div class="content">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" data-i18n-placeholder="searchPlaceholder" placeholder="Search blood banks, hospitals...">
+                </div>
+                
+                <div class="category-section">
+                    <div class="section-title">
+                        <span data-i18n="bloodTypes">Blood Types</span>
+                    </div>
+                    <div class="blood-type-grid">
+                        <div class="blood-type-item" data-type="A+">A+</div>
+                        <div class="blood-type-item" data-type="B+">B+</div>
+                        <div class="blood-type-item" data-type="AB+">AB+</div>
+                        <div class="blood-type-item" data-type="O+">O+</div>
+                        <div class="blood-type-item" data-type="A-">A-</div>
+                        <div class="blood-type-item" data-type="B-">B-</div>
+                        <div class="blood-type-item" data-type="AB-">AB-</div>
+                        <div class="blood-type-item" data-type="O-">O-</div>
+                    </div>
+                </div>
+                
+                <div class="blood-banks">
+                    <div class="section-title">
+                        <span data-i18n="availableBloodBanks">Available Blood Banks</span>
+                    </div>
+                    
+                    <div class="blood-bank-card">
+                        <div class="blood-bank-logo">RBC</div>
+                        <div class="blood-bank-info">
+                            <div class="blood-bank-name">Red Cross Blood Center</div>
+                            <div class="blood-bank-distance">Available: A+, B+, O-</div>
+                            <div class="blood-bank-rating">
+                                <span class="rating-stars">★★★★★</span>
+                                <span>5.0 (120 reviews)</span>
+                            </div>
+                        </div>
+                        <button class="donate-btn" data-i18n="contact">Contact</button>
+                    </div>
+                    
+                    <div class="blood-bank-card">
+                        <div class="blood-bank-logo">CL</div>
+                        <div class="blood-bank-info">
+                            <div class="blood-bank-name">City Life Hospital</div>
+                            <div class="blood-bank-distance">Available: AB+, O+, O-</div>
+                            <div class="blood-bank-rating">
+                                <span class="rating-stars">★★★★☆</span>
+                                <span>4.8 (86 reviews)</span>
+                            </div>
+                        </div>
+                        <button class="donate-btn" data-i18n="contact">Contact</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Profile Screen -->
+        <div class="screen" id="profile-screen">
+            <div class="header">
+                <h2 data-i18n="myProfile">My Profile</h2>
+                <div class="header-icons">
+                    <i class="fas fa-edit"></i>
+                </div>
+            </div>
+            <div class="content">
+                <div class="profile-header">
+                    <div class="profile-pic">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="profile-name">John Donor</div>
+                    <div class="profile-blood">A+</div>
+                </div>
+                
+                <div class="profile-stats">
+                    <div class="stat">
+                        <div class="stat-value">12</div>
+                        <div class="stat-label" data-i18n="donations">Donations</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">3.6</div>
+                        <div class="stat-label" data-i18n="liters">Liters</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">36</div>
+                        <div class="stat-label" data-i18n="livesSaved">Lives Saved</div>
+                    </div>
+                </div>
+                
+                <div class="blood-info">
+                    <div class="blood-type-card">
+                        <div class="blood-type">A+</div>
+                        <div class="blood-label" data-i18n="bloodType">Blood Type</div>
+                    </div>
+                    <div class="blood-type-card">
+                        <div class="blood-type">102</div>
+                        <div class="blood-label" data-i18n="daysSinceLast">Days Since Last</div>
+                    </div>
+                </div>
+                
+                <div class="section-title">
+                    <span data-i18n="achievements">Achievements</span>
+                </div>
+                <div class="achievement-bar">
+                    <div class="achievement-progress"></div>
+                </div>
+                <div class="badge-grid">
+                    <div class="badge">
+                        <div class="badge-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="badge-title" data-i18n="tenPlusDonations">10+ Donations</div>
+                    </div>
+                    <div class="badge">
+                        <div class="badge-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="badge-title" data-i18n="lifesaver">Lifesaver</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Tab Bar (Fixed at bottom of all screens) -->
+        <div class="tab-bar">
+            <div class="tab active" data-screen="home-screen">
+                <i class="fas fa-home"></i>
+                <span data-i18n="home">Home</span>
+            </div>
+            <div class="tab" data-screen="search-screen">
+                <i class="fas fa-search"></i>
+                <span data-i18n="find">Find</span>
+            </div>
+            <div class="tab" data-screen="profile-screen">
+                <i class="fas fa-user"></i>
+                <span data-i18n="profile">Profile</span>
+            </div>
+        </div>
+        
+        <!-- Language Selector -->
+        <div class="language-selector">
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+                <option value="ar">العربية</option>
+            </select>
+        </div>
+    </div>
+<script>
+    // Check if user is logged in
+    document.addEventListener('DOMContentLoaded', function() {
+        const user = localStorage.getItem('user');
+        if (!user) {
+            window.location.href = 'index1.html';
+        }
+        
+        // You can also populate user data if needed
+        const userData = JSON.parse(user);
+        if (userData.name) {
+            document.querySelector('.profile-name').textContent = userData.name;
+        }
+        if (userData.email) {
+            // You could display email somewhere if needed
+        }
+    });
+</script>
+    <script src="scripts.js"></script>
+    <script src="dashboard3.js"></script>
+</body>
+</html>
