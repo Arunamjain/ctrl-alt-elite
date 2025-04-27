@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #008000;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo h1 {
+    color: #e74c3c;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.logo p {
+    color: #7f8c8d;
+}
+
+.auth-container {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 2px solid #eee;
+}
+
+.tab.active {
+    border-bottom: 2px solid #e74c3c;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.role-selection {
+    margin: 20px 0;
+}
+
+.role-options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.role-option {
+    flex: 0 0 30%;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.role-option:hover {
+    border-color: #e74c3c;
+}
+
+.role-option.selected {
+    background-color: #e74c3c;
+    color: white;
+    border-color: #e74c3c;
+}
+
+.role-option i {
+    font-size: 24px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #c0392b;
+}
+
+.forgot-password {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.forgot-password a {
+    color: #7f8c8d;
+    text-decoration: none;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .auth-container {
+        padding: 20px;
+    }
+}
